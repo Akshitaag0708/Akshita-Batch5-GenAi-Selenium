@@ -1,0 +1,56 @@
+-> find_element(locator-name,locator-value)
+  |-> single element
+  |-> Returns a single WebElement object
+  |->Finds only the first matching element on the webpage.
+  |-> if we do not able to find element through it then it gives error/exception "no such element exception"
+->find_elements(locator-name,locator-value)
+  |-> multiple elements
+  |-> return list of web elemets
+  |->Finds all matching elements on the webpage
+  |-> if we do not able to find any then it will return empty list [] ("no error")
+
+locator is address of that particular element
+8 types of locator:
+->ID
+->NAME
+->CLASS NAME
+->TAG NAME
+->LINK TEXT
+->PARTIAL LINK TEXT
+->CSS SELECTORS
+->XPATH
+
+we can perform many actions but we are learning 2:
+-> click ()
+-> send_keys()
+open webbrowser and inspect for elements then click on arrow in top left now whatever element u want click on it in web screen the element html code will get highlighted in inspect
+
+class name and name can be same for multiple so we are going to use xpath
+
+compound class name should be replaced by . in place of space
+like the class name is nav-input nav-progressive-attribute so we need to replace space after input with .(dot)
+WHEN multiple elements have same class it will take the first element
+#Compound class are classes that are nested inside other classes. The compound class name should be replaced with '.'
+
+
+
+//tag name
+multiple value has same tag name so it gives value to first element having provided tag name
+tag name is least used locator
+
+
+//LINK TEXT
+Applicable only for anchor tags
+for link text and partial link test they are space sensitive as well as case sensitive
+
+NOTE: id , name , classname and tag name are direct locator whereas link text and  partial link text are text based locators ,and CSS selectors and XPATH are expression based locators
+
+
+partial link test :
+for long text it is used
+instead of using entire text we can give a part of it
+HERE we have freedom of choosing from start or from end or from between
+syntax is tagname[attribute ='value ]
+ctrl+f in inspect paste tagname[attribute ='value ] this and check if any area is highlighted if yes then it is present
+as expressions are used carefully so it is a way to verify if it is correct or not
+

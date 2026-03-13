@@ -1,0 +1,94 @@
+install PyCharm
+then in pycharm terminal install selenium :
+pip install selenium
+-----------------------------------------------------------------------------------------------------------------------------
+1->launch the browser
+make a launch.py file
+in launch.py file
+ from selenium.webdriver import Chrome    //from selenium package in webdriver module we are importing class Chrome
+ driver =Chrome()
+ //driver is the variable that is holding the chrome
+ // after this there is a blink of white screen
+ // to stop white screen for more time we can use sleep(time)
+ sleep is nopt a standadrd way to hold the browser
+
+ //to launch chrome
+ # from time import sleep
+ # from selenium.webdriver import Chrome
+ # driver =Chrome()
+ # sleep(5)
+
+
+
+ //to launch edge
+ # from time import sleep
+ # from selenium.webdriver import Edge
+ # driver=Edge()
+ # sleep(7)
+
+
+ //to hold the browser by change in Chromeoptions
+ // these are extra browser settings to hold the window
+ from selenium.webdriver import Chrome,ChromeOptions
+ o=ChromeOptions()
+ o.add_experimental_option("detach",True)  // this will hold the window if we pass false then again it will blink
+ driver=Chrome(options=o)    // if we do not pass options=o then also browser will blink
+------------------------------------------------------------------------------------------------------------------------------
+2-> open the website
+ driver.get("https://www.google.com")
+// we need to pass a url inside get() method
+// get() method will open the usl passed in it
+// return type of get() is none
+
+  #  maximise the screen of browser
+->>  driver.maximize_window()
+  //// return type of maximize_window() is none
+
+  # minimise the window
+->>  driver.minimize_window()
+  /// return type of minimize_window() is none
+
+
+selenium is acting fast whereas browser is not so to solve this we will use sleep and wake in between
+
+ task1 : to launch amzon website in max min and fullscreen
+# driver.get("https://www.amazon.com")
+# sleep(5)
+# driver.maximize_window()
+# sleep(2)
+# driver.minimize_window()
+# sleep(3)
+# driver.fullscreen_window()
+# to do all 3 task together we will use sleep() between all 3 as selenium is very fast and browser is slow so to match both we use sleep and wake
+
+// fetch the title
+->>t = driver.title       # we fetch title to perform validation
+->>print(t)
+title is not a method it is a verification property
+return type of title is string
+
+note: maximize_window , minimize_window and fullscreen_window are window size method
+note: title , current_url and page_source are page information properties or verification properties not method
+
+->>print(driver.current_url)    # sometimes title are same for multiple sites so we use current_url for verification
+
+->>print(driver.page_source)     # it is not used much,gives html file
+
+->>print(driver.name)     # print the name of the browser we are using
+
+->>sleep(5)
+->># driver.close()      # suppose we open more tab manually in browser then this will close the url tab only as the sleep time completes
+
+->>driver.quit()        # suppose we open more tab manually in browser then this will close all tabs including url page as the sleep time completes
+
+NOTE-- for single tab both close() and quit() will perform samely
+NOTE-- but for many tabs close() will close only the tab that driver is carrying whereas quit will close the whole browser means all tabs get closed
+
+# whenever we launch we have 3 options back , next and refresh so to do that we have 3 methods:
+->># driver.back()
+->># driver.forward()
+->># driver.refresh()
+
+
+
+

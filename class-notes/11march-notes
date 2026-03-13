@@ -1,0 +1,94 @@
+TABLE OF CONTENT :
+
+1.Software testing
+	|-definition
+	|-Ways of Testing
+		|-Manual Testing
+		|-Automation Testing
+	|-Tools
+2.Selenium
+	|-Introduction
+	|-History
+	|-Components
+	|-Advantages and Disadvantages
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+software testing :
+-> to check if s/w is working according to user requirement
+2 ways of testing :
+-> manual testing :
+Manual testing relies on human testers for exploratory, usability, and ad-hoc testing to provide immediate, subjective feedback.
+diadvantages: time consuming
+	    : Tedious , Monotonous (it involves repetitive, high-concentration tasks that can become mechanical over time, leading to boredom and potential oversights. It requires testers to manually
+             execute the same scenarios—such as logging in, clicking buttons, and validating outputs—across different versions of an application. )
+	    : depends on person's consistancy
+            : depends on manpower
+
+it is necessary for ui / ux , complex/new features , etc so we can not avoid it.
+
+-> automation testing
+testing a s/w or application using tools or technology
+Automation testing uses scripts and tools like Selenium or Appium to execute repetitive, regression, and performance tests, offering high speed, accuracy, and efficiency for large-scale projects.
+write script one  and run it n many times
+to write scripts we are using selenium
+advantages: time-efficient
+	  : less manpower
+	  : accuracy and consistancy is increased
+	  : reusability
+disadvantages: initial cost is high
+	     : technical issues are possible
+	     : programming skills required
+	     : whenever we require human judgement we can not use automation testing
+tools:
+->Selenium
+->TestComplete
+->playwright
+->QTP
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+selenium :
+
+popular open-source software testing framework used for automating web applications.
+widely used for functional testing, regression testing, and performance testing.
+Selenium supports multiple programming languages, including Java, C#, Python, and Ruby, making it accessible to a wide range of developers.
+intoduced in 2004 by Jason Huggins
+components of selenium:
+these are also seperate tools.these are not versions of selenium.
+-> Selenium WebDriver
+-> Selenium IDE (Integrated Development Environment)
+-> Selenium Grid
+-> Selenium RC (Remote Control)
+
+history:
+2004: Selenium Core (JavaScriptTestRunner) Jason Huggins developed a JavaScript program to automate testing for an internal application, which was later named Selenium Core and released as open-source.
+The name "Selenium" was a joke at the expense of a competitor, Mercury Interactive, as selenium is an antidote to mercury poisoning.
+
+Selenium RC:(2004)
+complex bcz RC Server needed to installed seperately
+based on script
+its problem is architecture
+major drawback is no direct communication
+there is a RC Server used for communication which increases the time
+it has been officially deprecated in favor of WebDriver.
+
+selenium IDE:(2006)
+A browser extension (for Chrome and Firefox) that provides a simple record-and-playback functionality for creating tests without requiring extensive programming knowledge
+DRAWBACK: Selenium IDE has several drawbacks that limit its effectiveness for complex projects, primarily due to its limited programming capabilities and lack of advanced testing features.
+It is primarily suited for simple, short test cases, such as smoke testing
+
+selenium webdriver:(2009)
+It does not require an intermediary server like its predecessor and offers faster, more stable, and reliable automation by communicating with browser-specific drivers such as ChromeDriver, GeckoDriver, and others.
+It supports multiple programming languages, including Java, Python, C#, and Ruby.
+drawback is it does not allow parallel execution
+to overcome this grid is introduced.
+
+selenium grid:(2011)
+used to scale test execution by running tests in parallel across multiple machines, browsers, and operating systems.
+It operates on a hub-and-node architecture (or a more sophisticated distributed model in the latest versions) to manage and distribute test loads efficiently, significantly reducing the overall test execution time.
+
+advantages: remain same as automatic testing
+disadvantages:
+- we can only check from web apllication not mobile application
+- no official customer support as it is open source
+- no 100% automation
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
