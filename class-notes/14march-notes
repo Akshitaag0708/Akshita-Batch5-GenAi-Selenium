@@ -1,0 +1,72 @@
+continuing CSS LOCATOR -
+
+WE can also provide tag_name[id ="username]=#username  or tag_name#username
+for id only # is used
+for classname . is used like tag_name[classname="user"] then .user or tag_name .user
+
+
+priority of locators:
+1.id
+2.name
+3.CSS Selectors
+4. XPATH
+
+-------------------------------------------------------------------------------------------------------------------
+
+XPATH
+HERE X stands for XML PATH
+first used for xml bu lately used for html also
+
+syntax : //tag_name[@attribute="value"]
+
+in x PATH:
+-> we can traverse backward or forward
+-> locate elements based on text (as in link and partial link we can use text only for anchor tags>
+-> locate elements based on  attributes
+->used for dynamic elements
+
+                Xpath
+                  /\
+                 /  \
+          absolute   Relative
+
+ absolute -> /html/body/div[1]/input[1]
+
+relative -> //div//input[1]
+
+-> index is important otherwise it will take the first matched element only
+
+xpath using attribute :
+syntax : //tag_name[@attribute="value"]
+press ctrl+f in inspect then write in box : //tag_name[@attribute='value'] then enter if highlighted shown then it is correct
+like css selector it is also used for verification
+
+xpath using text
+//tag_name[text()="value"]
+instead of text() we can also use .
+//tag_name[.="value"]
+difference between dot and text - using text() i can not locate inner elements for dot operator i can even access inner elements
+
+->  text() in XPath
+text() selects only the direct text node inside an element
+It does not include text inside child tags.
+
+->  . in XPath
+. represents the entire text content of the element.
+It includes text inside child elements also.
+
+->> XPATH using contains attribute
+syntax= tag_name[contains(@attribute,'value')]
+used when attribute value is large so we can pass a part of it here
+avoid dynamic names like username@1 and username@2 so these are types of dynamic so do not use this with this
+
+->> XPATH using contains text
+syntax= tag_name[contains(text(),'value')]    // for text
+syntax= tag_name[contains(. ,'value')]     //for dot
+
+when in XPATH multiple elements have same then we use indexing concept
+XPath indexing always starts from 1, unlike Python lists which start from 0.
+(//tagname)[index]
+(//input[@class="form-control"])[2]   with attributes
+(//span[contains(text(),"Apple")])[1]   with text
+alternative way : //div[@class="item"][3]

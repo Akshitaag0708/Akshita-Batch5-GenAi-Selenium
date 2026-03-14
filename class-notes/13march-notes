@@ -50,7 +50,12 @@ partial link test :
 for long text it is used
 instead of using entire text we can give a part of it
 HERE we have freedom of choosing from start or from end or from between
-syntax is tagname[attribute ='value ]
-ctrl+f in inspect paste tagname[attribute ='value ] this and check if any area is highlighted if yes then it is present
+
+// CSS SELECTORS
+syntax is tag_name[attribute ='value ]
+ctrl+f in inspect paste tag_name[attribute ='value ] this and check if any area is highlighted if yes then it is present
 as expressions are used carefully so it is a way to verify if it is correct or not
 
+WE can also provide tag_name[id ="username]=#username  or tag_name#username
+for id only # is used
+for classname . is used like tag_name[classname="user"] then .user or tag_name .user
