@@ -1,0 +1,35 @@
+to be continued......
+
+XPATH
+Traversing : travelling from one element to another ,done in dynamic elements
+2 types of traversing:
+-> forward (parent to child)
+-> backward (child to parent)   /.. we will reach parent of that
+
+-> locate dynamic element there are 2 way 1. via parent 2. via sibling
+
+
+** locating via parent
+1. identify static element
+2 . move to common parent (means move to parent common to static and dynamic elements)
+3. from common parent fetch the dynamic element
+
+
+example://td[text()="Gentry"] it is fetching Gentry column
+        //td[text()="Gentry"]/.. it is fetching parent element of td that is tr
+        //td[text()="Gentry"]/..//td[6] now this will fetvh the 6th element of that row
+
+text is the property to fetch the value
+
+there is browser additional setting like detach that is "o.add_argument("--headless")"
+this will help in :
+-browser runs without opening a visible GUI window.
+-The automation runs in the background.
+
+
+** locating via siblings following sibling (s
+2 types of sibling -
+1. following sibling (siblings below static element or any element are following sibling to that)
+     syntax: td[text()='name']//following-sibling::td[3]
+2. preceding sibling (siblings above  static element or any element are preceding sibling to that)
+     syntax: td[text()='name']//preceding-sibling::td[3]
