@@ -1,5 +1,3 @@
-#task1:
-
 '''
 open wikipedia
 refresh
