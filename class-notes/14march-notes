@@ -4,6 +4,9 @@ WE can also provide tag_name[id ="username]=#username  or tag_name#username
 for id only # is used
 for classname . is used like tag_name[classname="user"] then .user or tag_name .user
 
+Drawbacks of CSS selectors:
+- traverse backward once u go forward
+- text based selection
 
 priority of locators:
 1.id
@@ -23,7 +26,7 @@ in x PATH:
 -> we can traverse backward or forward
 -> locate elements based on text (as in link and partial link we can use text only for anchor tags>
 -> locate elements based on  attributes
-->used for dynamic elements
+-> used for dynamic elements
 
                 Xpath
                   /\

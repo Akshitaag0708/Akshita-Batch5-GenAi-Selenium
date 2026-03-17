@@ -1,0 +1,63 @@
+sleep() is not a correct way to hold
+so the correct way is using Implicitly Wait
+Implicitly Wait is also k/as Global Wait
+bcz in sleep we have to pass everytime but for implicit wait we need to pass only once and it is applicable for all
+
+
+                find_element()
+                find_elements()
+                       |      _________________________________________________________________
+                       |      |                                                                |
+                       \/     \/     false                         time is available           |
+                  Element present  ----------> Implicitly Wait(15)---------------------->  Polling Frequency 0.5 ms
+                        |                               |
+                        |                               |     time over
+                        \/                              \/
+                 return element or list             NoSuchElementException
+                                                            or empty list
+
+
+implicit wait is only when element is present if not present like loading or something then it can not fetch it
+Implicit wait only waits for element presence, not for:
+visibility
+text loading
+so for this we use explicit wait
+
+
+Wait Type	    Works For
+Implicit Wait -	Element present in DOM
+Explicit Wait -	Condition (visible, clickable, text present)
+
+in implicit wait we do not give any condition but for explicit we give condition
+implicit is applicable for all find_element but explicit will be applicable for that one element only
+
+explicit wait:
+
+
+                find_element()
+                find_elements()
+                       |      _________________________________________________________________
+                       |      |                                                                |
+                       \/     \/     false                         time is available           |
+                  Element present  ----------> Explicit Wait(15)---------------------->  Polling Frequency 0.5 ms
+                        |                               |
+                        |                               |     time over
+                        \/                              \/
+                 return element or list            TimeOutError
+
+
+we have to import :
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+EC means Expected Condition
+
+create object of WebDriverWait:
+wait = WebDriverWait(driver, 10)   here we pass driver and time in sec as input
+
+
+NOTE:
+by , keys and action_chains are from common module of selenium.webdriver and all other are from support module of selenium.webdriver
+
+NOTE:
+for link text it is necessary to use anchor tag only and anchor tag should have inner text. that's why link text is also k/as inner text
+
