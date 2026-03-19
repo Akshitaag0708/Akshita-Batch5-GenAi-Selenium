@@ -1,3 +1,22 @@
 ->to get attribute value we use get_attribute()
   we pass one argument in this get_attribute() which is the attribute name whose value we want to fetch .
 
+buttons:
+there are 3 functions :
+->is_displayed():
+returns true if elements are in dom or visible else false
+
+is_enabled()
+return true if button is enabled like for login , submit
+
+is_selected()
+for check boxs and all we used this
+
+we use these three methods for verification process
+
+for checkboxes and radio button we will perform click()
+1 click() = selected if again click()=dis-select
+
+
+we have to pass r when passing path as send keys:r represent raw data
+send_keys(r"C:\Users\hp\Pictures\WhatsApp Image 2025-01-30 at 18.32.55_19f04f83")
