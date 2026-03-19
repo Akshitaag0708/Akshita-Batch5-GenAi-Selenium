@@ -1,0 +1,3 @@
+->to get attribute value we use get_attribute()
+  we pass one argument in this get_attribute() which is the attribute name whose value we want to fetch .
+

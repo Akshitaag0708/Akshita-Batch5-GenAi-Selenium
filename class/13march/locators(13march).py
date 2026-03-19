@@ -13,6 +13,7 @@ driver=Chrome(options=o)
 
 # id locator and entering value in demoqa
 # element=driver.find_element(By.ID, "userName")
+
 # element.send_keys("Akshita")
 # driver.find_element(By.ID, "userEmail").send_keys("akshita@gmail.com")
 # driver.find_element(By.ID, "currentAddress").send_keys("jaipur")
