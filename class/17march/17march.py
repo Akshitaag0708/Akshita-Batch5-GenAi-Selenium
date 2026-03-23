@@ -15,7 +15,6 @@ driver=Chrome(options=o)
 # # sleep(6)
 # driver.implicitly_wait(10)
 # print(driver.find_element(By.ID,"finish").text)
-
 # --------------------------------------------------------------------------------------------------------------------------------
 
 #'''Implicit wait (implicitly_wait(10)) only waits for the element to appear in the DOM (presence), not for it to become visible.
@@ -34,13 +33,9 @@ from selenium.webdriver.support import expected_conditions as EC
 # o = ChromeOptions()
 # o.add_experimental_option("detach", True)
 # driver = Chrome(options=o)
-#
 # driver.get("https://the-internet.herokuapp.com/dynamic_loading/1")
 # driver.maximize_window()
-#
 # driver.find_element(By.XPATH, "//div[@id='start']//button").click()
-#
-#
 # # Explicit wait for visibility of text
 # wait = WebDriverWait(driver, 10)
 # text_element = wait.until(EC.visibility_of_element_located((By.ID, "finish")))

@@ -1,0 +1,15 @@
+
+ DROPDOWN
+
+    ->SELECT <SELECT>
+    ->CUSTOM <DIV> <LI>
+
+Single Select No deselect here
+
+MultiSelect  deselect
+
+Select_by_visible_text  As per given in the dropdown....
+Select_by_value  attribute
+Select_by_index     0,1,2,3...
+
+Custom Dropdown -> div, li
