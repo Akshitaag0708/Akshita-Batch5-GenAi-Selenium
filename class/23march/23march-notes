@@ -1,0 +1,75 @@
+using keys we can click on any keyboard keys
+
+driver.find_element(By.ID , "id").send_keys("shoes")
+driver.find_element(By.ID , "id").click()
+rather then click we can user enter key so we will write send_keys(keys.ENTER)   ( we need to import keys)
+
+copy-paste
+first select the text :send_keys(Keys.CONTROL,'a')
+second copy the text :send_keys(Keys.CONTROL,'c')
+lastly paste the text :send_keys(Keys.CONTROL , 'v')
+
+ActionChain
+we use ActionChain class for this so firstly we need to import it
+it helps to perform many action one after one
+ActionChains is used to perform advanced user interactions
+
+it works in 3 step
+1. create object (once)
+2. store action
+3. then it perform (we have method .perform() for this)
+
+Note: .perform() is essential to make the action get performed
+.perform() is method that executes all the actions
+
+actions.click(single_click).perform()   //click store one argument that is the name of element on which we are performing
+actions.double_click(double_click).perform()    // for double click
+actions.click(double_click).click(double_click).perform()       //this will also perform double click
+action.context_click(right_click).perform()      //for right click  as we get context as we do right click so it is named as context_click()
+
+scroll:
+actions.scroll_to_element() is used to scroll to that element
+actions.scroll_by_amount() it takes 2 argument x-pixels and y-pixels
+
+origin=ScrollOrigin.from_element(elt)
+actions.scroll_from_origin(origin,200,400).perform() takes 3 input argument 1st is origin then x then y . scroll these pixels from that origin element
+
+pause() is like sleep() it is given between actions
+
+
+click_and_hold():
+takes element as argument
+Used to click and hold the mouse button on an element
+Commonly used for:
+Drag & drop
+Slider movement
+Long press actions
+
+drag_and_drop()
+it takes two argument
+first is source
+second is destination
+it helps in performing drag and drop operation
+
+drag_and_drop_by_offset()
+takes 3 argument
+first is source , second is x pixels and thirs is y pixels
+drag an element from its current position and drop it at a specific x, y offset (distance).
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------ACTION CHAINS-------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+tab switching:
+
+->current_window_handle
+It is used to get the ID of the current browser window/tab
+current tab ID
+
+-> window_handles
+Get all windows
+list of all tabs
+
+->switch_to.window(window_id)
+switch between tabs

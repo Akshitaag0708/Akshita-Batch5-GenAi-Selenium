@@ -4,9 +4,9 @@
     ->SELECT <SELECT>
     ->CUSTOM <DIV> <LI>
 
-Single Select No deselect here
+in Single Select -No deselect here
 
-MultiSelect  deselect
+in MultiSelect - we can perform deselect
 
 Select_by_visible_text  As per given in the dropdown....
 Select_by_value  attribute
