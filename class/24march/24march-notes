@@ -1,0 +1,92 @@
+frame handling
+
+when our element is a frame , we will get no such element exception
+we get this issue when our locator is wrong or selenium is interacting fastly
+
+when No such element exception occur:
+first check for locator(check if locator is correct)
+then for if page is loading slower(use sleep or wait)
+and lastly for if frame is there(use frame switching)
+
+A frame (or iframe) is like a webpage inside another webpage.
+Selenium cannot directly interact with elements inside a frame unless you switch to it first.
+
+If you try:driver.find_element(....) on an element inside a frame → ❌ NoSuchElementException.Because Selenium is still in the main page context
+
+How to Handle Frames in Selenium:
+1. Switch using index:
+driver.switch_to.frame(0)
+0 = first frame on page
+
+2.Switch using name or id
+driver.switch_to.frame("frameName")
+
+3. Switch using WebElement (Most reliable )
+frame = driver.find_element(By.XPATH, "//iframe[@id='frame1']")
+driver.switch_to.frame(frame)
+
+above we are moving from parent to child now we will switch from child to parent
+
+1.Go from child → parent frame
+driver.switch_to.parent_frame()
+This moves one level up only
+
+2. Go from any frame → main page (default content)
+driver.switch_to.default_content()
+This jumps directly to main page, skipping all parent levels
+
+
+NOTE : .clear() is used to clear the text we have written
+
+-------------------------------------------------------------------------------------------------------------------
+
+Alerts and popups :
+
+three types of alert:
+-> simple alert (in this we have only 1 option that is ok)
+-> Confirmation Alert (in this we have 2 option that is ok or cancel to accept or to dismiss)
+-> prompt alert ( in this we have to provide a prompt then we have 2 option ok or cancel)
+
+
+these javascript alert we can not inspect so this is why we are handling them this way
+
+first we need to switch to alert then do action
+alert=driver.switch_to.alert
+alert.accept()                    #to accept means to click on ok
+alert.dismiss()                   #to reject means to click on cancel
+
+-----------------------------------------------------------------------------------------------------------------------
+download and upload file
+
+to download perform click() operation and for upload perform send_keys() operation
+
+----------------------------------------------------------------------------------------------------------------------
+# driver.get("https://www.python.org/")
+# driver.maximize_window()
+# sleep(2)
+# driver.find_element(By.LINK_TEXT , "Downloads").click()
+# driver.find_element(By.LINK_TEXT , "Python 3.14.3").click()          # this will not works for downloading saying safe browsing is off
+# so we need to add safe browsing from ChromeOptions
+
+o.add_experimental_option("prefs",{"safebrowsing.enabled":True})
+driver = Chrome(options=o)
+driver.get("https://www.python.org/")
+driver.maximize_window()
+sleep(2)
+driver.find_element(By.LINK_TEXT , "Downloads").click()
+sleep(2)
+driver.find_element(By.LINK_TEXT , "Python 3.14.3").click()          # this will start downloading as we have enabled the safe browsing
+
+-----------------------------------------------------------------------------------------------------------------------------
+o.add_experimental_option("prefs",{"safebrowsing.enabled":True})   //to enable safe browsing
+
+----------------------------------------------------------------------------------------------------------------------------------
+to disable notification we can also use ChromeOption
+o.add_argument("--disable-notifications")
+-------------------------------------------------------------------------------------------------------------------------------
+
+hidden division popper can be inspected and cancelled by clicking on cross
+
+like login pop up on flipkart , date-picker  are hidden division popper
+
+------------------------------------------------------------------------------------------------------------------------------------
