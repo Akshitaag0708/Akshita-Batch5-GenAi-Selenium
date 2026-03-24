@@ -135,8 +135,17 @@ driver = Chrome(options=o)
 
 # ----------------------------------------------------------------------------------------------------------------------------------------
 
-
-
+driver.get("https://demoqa.com/automation-practice-form")
+driver.maximize_window()
+sleep(2)
+driver.find_element(By.ID,"dateOfBirthInput").click()
+month=driver.find_element(By.XPATH,"//select[@class='react-datepicker__month-select']")
+mon=Select(month)
+mon.select_by_visible_text("August")
+year=driver.find_element(By.XPATH,"//select[@class='react-datepicker__year-select']")
+yr=Select(year)
+yr.select_by_visible_text("2003")
+driver.find_element(By.XPATH,"//div[@class='react-datepicker__day react-datepicker__day--007']").click()
 
 
 
