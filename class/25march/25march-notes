@@ -1,0 +1,47 @@
+Assertion :
+Assertion is the process of comparing expected and actual values to validate a test.
+assert : by using it will will check if title is expected or not
+assert expected == actual
+if this fails then further execution will stop and a assertion exception(AssertionError) will come
+
+xxxxxxxxxxxxxxxxxxxx-----------------------ASSERTION-------------------------xxxxxxxxxxxxxxxxxxxxxxx
+
+
+Screenshot:
+we takes screenshot to show test failure proof
+
+# full screen screenshot
+# driver.save_screenshot('screenshot1.png')      # we get this screenshot in directory where we have file
+
+#  if u want to store in differ location we need to import os
+import os  # if u want to store in differ location
+folder=os.path.join(os.getcwd() , "screenshot")    # now this folder is created now we check if it exists or not
+os.makedirs(folder,exist_ok=True)                   # this will check folder existance
+
+driver.save_screenshot(f'{folder}/screenshot.png')
+
+
+# screenshot of a particular element
+
+first locate that element using locators and then store it and then use screenshot()
+
+for this we just need to use screenshot() only
+ele=driver.find_element(By.XPATH,"//textarea[@title='Search']")
+ele.screenshot(f'{folder}/search.png')
+
+note : save_screenshot() is for full page
+
+##Based on timestamp also we can store screenshot
+
+#  based on time also we can store screenshot
+#  we need to import time
+#we use this so that multiple screenshot do not have same name
+# ele2=driver.find_element(By.XPATH,"//div[@id='LS8OJ']")
+import time
+timestamp=time.strftime("%Y%m%d%H%M%S")
+# ele2.screenshot(f'{folder}/{timestamp}.png')
+
+ele3=driver.find_element(By.XPATH,"//div[@class='FPdoLc lJ9FBc']")
+ele3.screenshot(f'{folder}/screenshot_ele3_{timestamp}.png')
+
+
