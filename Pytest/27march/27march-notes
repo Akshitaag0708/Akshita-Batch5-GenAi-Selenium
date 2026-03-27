@@ -1,0 +1,64 @@
+Pytest is a Python testing framework used for unit testing as well as functional and integration testing.
+
+The Rules are:
+-> File name should start with test_ or end with _test . It is advised to use test_ in start .
+-> Function name should start with test_ .
+-> Class name should start with Test .
+
+When we follow these rules pytest will automatically recognise the files , classes and functions following the rule.
+So without giving function call or without creating class object , we can execute the function or class.
+
+pytest won't recognise the functions not following the rule.
+
+In test classes we not need to create object and call function .
+and if we do so the execution will happen twice.
+
+Naming Conventions:
+->File name → test_*.py or *_test.py
+->Function name → must start with test_
+->Class name -> must start with Test_
+
+first install pytest-pip install pytest
+
+commands-
+
+1. pytest TestDemo.py -v
+- Verbose mode (detailed output)
+What it does:
+-Shows each test name
+-Shows PASSED / FAILED status
+Useful when you want to see:
+-Which test ran
+-Which test failed
+
+2. pytest TestDemo.py -s
+Show print statements
+What it does:
+-Displays print() output in terminal
+-Without -s, print output is hidden
+
+3. 3. pytest TestDemo.py -vs
+Combination of both (-v + -s)
+What it does:
+-Shows test names (verbose)
+-Shows print statements
+
+Important Commands
+pytest                 ->run all tests
+pytest -v              ->verbose (detailed output)
+pytest -s              ->show print statements
+pytest -vs             ->verbose + print
+pytest -k "name"       ->run specific test
+pytest TestDemo.py     ->run specific file
+
+NOTE- there is no constructor in pytest
+
+Assertion:
+assert is used to verify that the actual result matches the expected result.
+If the condition is True → test PASSED
+If the condition is False → test FAILED
+
+You can add a custom failure message:
+def test_demo():
+    assert 2 + 2 == 5, "Addition failed"
+
