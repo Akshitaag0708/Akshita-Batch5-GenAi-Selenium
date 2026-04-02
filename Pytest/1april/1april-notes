@@ -1,0 +1,76 @@
+-> import requests
+Imports the requests library
+Used to send HTTP requests (API calls)
+Supports: GET, POST, PUT, DELETE
+
+-> requests.get(url)
+response = requests.get("https://petstore.swagger.io/v2/store/inventory")
+What it does:
+Sends a GET request to the API
+Fetches data from server
+Returns:
+A Response object
+
+-> Response Object (response)
+This is the most important part.
+It contains:
+data
+status
+headers
+JSON
+
+-> response.text
+print(response.text)
+Meaning:
+Returns raw response as string
+Useful for:
+debugging
+viewing HTML/XML/text
+Example Output:
+{"sold":10,"available":50}
+Type = str
+
+-> response.status_code
+print(response.status_code)
+
+Used for validation in testing
+Meaning:
+Returns HTTP status code
+Common Codes:
+Code	Meaning
+200	OK
+201	Created
+400	Bad Request
+401	Unauthorized
+404	Not Found
+500	Server Error
+
+
+-> response.json()
+print(response.json())
+Meaning:
+Converts response into Python dictionary
+Only works if response is JSON
+ Example Output:
+{'sold': 10, 'available': 50}
+ Type = dict
+
+Difference: text vs json()
+Feature	                text        	json()
+Type	                string          dictionary
+Use	                    raw view	     structured data
+Safe for API testing	no               yes
+
+ requests.get() → sends request
+ response → stores result
+ status_code → validation
+ text → raw data
+ json() → parsed data
+
+------------------------------------------
+
+
+In pytest, markers are used to categorize, control, and customize test execution.
+1. Custom Markers
+User-defined markers (very important for grouping tests)
+syntax @pytest.mark.regression
