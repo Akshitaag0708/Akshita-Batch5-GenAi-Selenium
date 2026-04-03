@@ -1,0 +1,61 @@
+Built-in Markers
+These are already provided by pytest (no need to define)
+
+Common Built-in Markers
+->@pytest.mark.skip
+Skips the test
+
+-> @pytest.mark.skipif
+@pytest.mark.skipif(condition, reason="message")
+Skips based on condition
+used to conditionally skip a test based on a boolean expression. If the condition evaluates to True, the test is skipped with a given reason
+
+->@pytest.mark.xfail
+Expected to fail
+
+-> @pytest.mark.parametrize
+run the same test multiple times with different inputs
+Instead of writing multiple test functions, you write one test + multiple data sets
+Run test multiple times with different data
+syntax:
+@pytest.mark.parametrize("arg1,arg2,...", [(val1,val2), (val3,val4)])
+def test_function(arg1, arg2):
+    ...
+
+
+@pytest.fixture
+@pytest.fixture is used in pytest to create reusable setup code for your tests.
+It helps you:\
+Avoid repeating setup code
+Manage test dependencies
+Keep tests clean and readable
+A fixture is a function that runs before a test and provides data or setup to that test.
+
+
+
+----------------------------------------------------------------
+    DDT - data driven testing
+
+pip install openpyxl
+
+firstcreate excel
+
+---------------------------------------------------
+
+1. pip freeze > requirements.txt  ->  this will create one requirements.txt
+
+2.  python -m venv "venv" -> this will create a virtual environment and folder named venv
+  |-> used to create a virtual environment in Python.
+python -m venv
+Runs the built-in module venv
+Used to create an isolated environment
+"venv"
+Name of the folder where environment will be created
+You can name it anything (env, .venv, etc.)
+
+3.
+
+
+
+
+
