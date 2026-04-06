@@ -40,6 +40,19 @@ pip install openpyxl
 
 firstcreate excel
 
+
+
+
+conftest:
+special configuration file used to share common setup code across multiple test files.
+Simple Definition
+
+conftest.py is used to define:
+fixtures
+hooks
+shared setup/teardown logic
+And the best part: you don’t need to import it manually—pytest automatically detects and uses it.
+
 ---------------------------------------------------
 
 1. pip freeze > requirements.txt  ->  this will create one requirements.txt
