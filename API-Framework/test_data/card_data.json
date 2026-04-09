@@ -1,0 +1,34 @@
+{
+    "valid_card": {
+        "cardNumber": "1234567812345678",
+        "expiry": "12/28",
+        "cvv": "123",
+        "balance": 5000
+    },
+
+    "invalid_card": {
+        "cardNumber": "1111222233334444",
+        "expiry": "01/20",
+        "cvv": "000"
+    },
+
+    "update_card": {
+        "cardId": 101,
+        "balance": 8000
+    },
+
+    "transaction_valid": {
+        "cardNumber": "1234567812345678",
+        "amount": 1000
+    },
+
+    "transaction_invalid": {
+        "cardNumber": "1234567812345678",
+        "amount": 100000
+    },
+
+    "verify_card": {
+        "cardNumber": "1234567812345678",
+        "cvv": "123"
+    }
+}

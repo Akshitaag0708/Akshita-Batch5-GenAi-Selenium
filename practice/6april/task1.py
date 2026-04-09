@@ -1,4 +1,6 @@
 import requests
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # payload = {
 #   "city": "Jaipur",
@@ -47,5 +49,4 @@ headers = {
 res3 = requests.get(f"https://www.shoppersstack.com/shopping/shoppers/{user_id}",headers=headers,verify=False)
 assert 200 == res3.status_code , f"not equal {res3.status_code}"
 print(res3.json())
-
 

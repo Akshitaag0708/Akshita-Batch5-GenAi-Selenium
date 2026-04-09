@@ -25,7 +25,12 @@ def test_function(arg1, arg2):
 
 @pytest.fixture
 @pytest.fixture is used in pytest to create reusable setup code for your tests.
-It helps you:\
+setup and teardown
+by default its scope is function but we can change to class , session
+
+in api fixture can be session , authenticatioon , etc ,
+
+It helps you:
 Avoid repeating setup code
 Manage test dependencies
 Keep tests clean and readable

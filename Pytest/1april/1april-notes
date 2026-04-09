@@ -55,6 +55,9 @@ Only works if response is JSON
 {'sold': 10, 'available': 50}
  Type = dict
 
+
+
+
 Difference: text vs json()
 Feature	                text        	json()
 Type	                string          dictionary

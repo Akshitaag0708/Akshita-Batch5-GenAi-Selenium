@@ -1,0 +1,27 @@
+A Session in requests means maintain a connection and reuse settings across multiple requests
+
+requests → sends independent HTTP requests ,each requests is independent
+Session → sends connected (stateful) requests
+
+to run one function : also we can use pytest filepath::function_name -vs
+
+pytest --tb=shot-> it will give description of failure
+
+pytest --tb=no  ->
+
+
+response.elapsed
+response.headers
+
+types of parameter:
+query parameter , path parameter
+
+
+api chaining
+schema validation
+
+loggers
+
+we put custom maekers in pytest.ini file
+report html  is created using .ini file
+

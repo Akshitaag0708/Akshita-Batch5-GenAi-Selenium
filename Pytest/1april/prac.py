@@ -1,11 +1,11 @@
-# import requests
-# from requests import delete
+import requests
+from requests import delete
 
-#  get
+ # get
 # response=requests.get("https://petstore.swagger.io/v2/store/inventory")
 
 # response=requests.get("https://petstore.swagger.io/v2/pet/findByStatus?status=sold")
-
+#
 # print(response.text)
 # print(response.status_code)
 # print(response.json())
