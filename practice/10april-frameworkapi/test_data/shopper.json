@@ -1,0 +1,12 @@
+{
+  "update_user": {
+    "city": "Jaipur",
+    "country": "India",
+    "email": "updatedemail@gmail.com",
+    "firstName": "Akshita",
+    "gender": "FEMALE",
+    "lastName": "Agarwal",
+    "phone": "9876543210",
+    "state": "Rajasthan"
+  }
+}
